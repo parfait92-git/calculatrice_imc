@@ -1,7 +1,5 @@
 import * as imcSvc from './services/imc.service';
-import ImcSchema from '../../models/Imc';
 import connectDB from '../../utils/connectDB';
-import valid from '../../utils/valid';
 
 connectDB();
 
