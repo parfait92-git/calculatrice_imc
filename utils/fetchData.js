@@ -1,4 +1,4 @@
-const baseURL = "http://localhost:3000";
+const baseURL = "https://calculatrice-iimc.vercel.app/formulaire";
 
 export const postData = async (url, payload, token) => {
     const res = await fetch(`${baseURL}/api/${url}`, {
