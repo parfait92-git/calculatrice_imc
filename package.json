@@ -1,0 +1,33 @@
+{
+  "home": "http://parfait92-git.github.io/calculatrice_imc",
+  "name": "calculatrice_imc",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "express": "^4.17.1",
+    "isomorphic-unfetch": "^3.1.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.11.17",
+    "next": "10.0.7",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "react-router-dom": "^5.2.0",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^2.0.3"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.2.4",
+    "gh-pages": "^3.1.0",
+    "nodemon": "^2.0.7",
+    "postcss": "^8.2.6",
+    "tailwindcss": "^2.0.3"
+  }
+}

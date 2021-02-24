@@ -1,0 +1,1 @@
+{"ast":null,"code":"const ACTIONS = {\n  NOTIFY: 'NOTIFY',\n  SAVE_INDICE: 'SAVE_INDICE',\n  UPDATE_IMC: 'UPDATE_IMC'\n};\nexport default ACTIONS;","map":null,"metadata":{},"sourceType":"module"}

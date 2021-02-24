@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { jsx as _jsx } from \"react/jsx-runtime\";\n\nvar Loading = function Loading(_ref) {\n  var color = _ref.color;\n  return /*#__PURE__*/_jsx(\"p\", {\n    className: color,\n    children: \" en cour de chargement...\"\n  });\n};\n\nexport default Loading;","map":null,"metadata":{},"sourceType":"module"}
