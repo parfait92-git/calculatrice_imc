@@ -1,4 +1,4 @@
-const baseURL = "http://localhost:3000";
+const baseURL = "https://cameroonnitech.vercel.app";
 
 export const postData = async (url, payload, token) => {
     const res = await fetch(`${baseURL}/api/${url}`, {
