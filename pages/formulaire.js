@@ -1,5 +1,5 @@
-import Layout from "./components/layout";
-import Resultat from "./components/resultat";
+import Layout from "../components/layout";
+import Resultat from "../components/resultat";
 import { useState, useContext } from 'react';
 import { postData } from '../utils/fetchData';
 import valid from '../utils/valid';

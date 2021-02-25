@@ -14,34 +14,45 @@ function PoidsNormal(taille) {
 }
 
 function Interprete(imc, poidsNormal) { 
-    let remarque = "";
-    let msg = "";
+    let msg = message(imc);
+    let remarque = parseFloat(poidsNormal).toString().length<=3?msg+ parseFloat(poidsNormal).toFixed(0)+ "kg":msg+ parseFloat(poidsNormal).toFixed(2)+ "kg";
     if(imc <= 16.5) {
-        msg = "Vous etes d'une tellement maigre et vous risquez votre vie.Penser à bien vous nourrir pour avoir en normale un ";
-        remarque = parseFloat(poidsNormal).toString().length<=3?msg+ parseFloat(poidsNormal).toFixed(0)+ "kg":msg+ parseFloat(poidsNormal).toFixed(2)+ "kg";
-    } else if(imc > 16.5 && imc<=18.5) {
-        msg = "Vous etes d'une maigreur anormale penser à bien vous nourrir pour avoir en normale un poids de ";
-        remarque = parseFloat(poidsNormal).toString().length<=3?msg+ parseFloat(poidsNormal).toFixed(0)+ "kg":msg+ parseFloat(poidsNormal).toFixed(2)+ "kg";
+        return remarque;
+    } else if(imc<=18.5) {
+        return remarque;
     } else if(imc===25) {
-        remarque = "Votre corpulence est normale";
-    } else if(imc > 18.5 && imc<25) {
-        msg = "votre corpulence est normale mais chercher a avoir un poids de ";
-        remarque = parseFloat(poidsNormal).toString().length<=3?msg+ parseFloat(poidsNormal).toFixed(0)+ "kg":msg+ parseFloat(poidsNormal).toFixed(2)+ "kg";
-    } else if(imc > 25 && imc<=30) {
-        msg = "vous avez pris un surpoids il vous faut un poids de ";
-        remarque = parseFloat(poidsNormal).toString().length<=3?msg + parseFloat(poidsNormal).toFixed(0)+ "kg":msg+ parseFloat(poidsNormal).toFixed(2)+ "kg";
-    } else if(imc > 30 && imc<=35) {
-        msg = "Vous etes atteint d'une obésité modérée il vous faut perdre du poids pour avoir un poid de ";
-        remarque = parseFloat(poidsNormal).toString().length<=3?msg+ parseFloat(poidsNormal).toFixed(0)+ "kg":msg+ parseFloat(poidsNormal).toFixed(2)+ "kg";
-    } else if(imc > 35 && imc<=40) {
-        msg ="Vous etes atteint d'une obésité obésité sévère. il vous faut perdre du poids pour avoir un poids de ";
-        remarque = parseFloat(poidsNormal).toString().length<=3?msg+ parseFloat(poidsNormal).toFixed(0)+ "kg":msg+ parseFloat(poidsNormal).toFixed(2)+ "kg";
+    } else if(imc<25) {
+        return remarque;
+    } else if(imc<=30) {
+        return remarque;
+    } else if(imc<=35) {
+        return remarque;
+    } else if(imc<=40) {
+        return remarque;
     } else if(imc > 40) {
-        msg ="Vous etes atteint d'une obésité morbide ou massive. il vous faut perdre du poids pour avoir un poids de ";
-        remarque = parseFloat(poidsNormal).toString().length<=3?msg + parseFloat(poidsNormal).toFixed(0)+ "kg":msg+ parseFloat(poidsNormal).toFixed(2)+ "kg";
+        return remarque;
     }
 
-    return remarque;
+    function message(imc) {
+        if(imc <= 16.5) {
+            return  "Vous etes d'une tellement maigre et vous risquez votre vie.Penser à bien vous nourrir pour avoir en normale un ";
+        } else if(imc<=18.5) {
+            return  "Vous etes d'une maigreur anormale penser à bien vous nourrir pour avoir en normale un poids de ";
+        } else if(imc===25) {
+           return  "Votre corpulence est normale";
+        } else if(imc<25) {
+           return  "votre corpulence est normale mais chercher a avoir un poids de ";
+        } else if(imc<=30) {
+            return  "vous avez pris un surpoids il vous faut un poids de ";
+        } else if(imc<=35) {
+            return  "Vous etes atteint d'une obésité modérée il vous faut perdre du poids pour avoir un poid de ";
+        } else if(imc<=40) {
+            return "Vous etes atteint d'une obésité obésité sévère. il vous faut perdre du poids pour avoir un poids de ";
+        } else if(imc > 40) {
+           return "Vous etes atteint d'une obésité morbide ou massive. il vous faut perdre du poids pour avoir un poids de ";
+        }
+    }
+
  }
 
  module.exports = { CalculImc, PoidsNormal, Interprete }

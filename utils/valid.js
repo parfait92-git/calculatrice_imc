@@ -9,8 +9,8 @@ const valid = (taille, poids) => {
             }
         } 
         
-    } else if(taille < 1 || taille.toString().length>2/5) {
-        return taille+'m est invalide comme taille! veuillez donner une taille comprise entre 1m et 2.5m'
+    } else if(taille < 1/2 || taille.toString().length>2/5) {
+        return taille+'m est invalide comme taille! veuillez donner une taille comprise entre 0.5m et 2.5m'
     }
     
     if(poids%1 !== 0) {
