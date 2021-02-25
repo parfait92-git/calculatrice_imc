@@ -1,7 +1,11 @@
 {
   "/_app": "pages/_app.js",
+  "/api/imc": "pages/api/imc.js",
+  "/api/services/imc.service": "pages/api/services/imc.service.js",
+  "/formulaire": "pages/formulaire.html",
+  "/": "pages/index.html",
+  "/state/GlobalState": "pages/state/GlobalState.html",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js",
-  "/formulaire": "pages/formulaire.js"
+  "/404": "pages/404.html"
 }
